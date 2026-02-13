@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaproszenie - Dzień Otwarty SP 5 Goleniów</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .sketch-icon {
+            opacity: 0.15;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Styl dla biedronek */
+        .ladybug {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 30;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+
+        .ladybug:hover {
+            transform: scale(1.2);
+        }
+
+        @media print {
+            .no-print { display: none; }
+            .ladybug { display: none; }
+            body { background: white; padding: 0; }
+            .print-shadow { box-shadow: none !important; border: 1px solid #eee; }
+            .invitation-container { transform: scale(1); margin: 0; }
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4 md:p-8">
+
+    <!-- Panel edycji (ukryty w druku) -->
+    
+
+    <!-- Grafika Zaproszenia -->
+    <div id="invitation-card" class="print-shadow relative overflow-hidden bg-white w-full max-w-[1050px] aspect-[16/9] shadow-2xl rounded-[40px] flex border-[12px] border-white">
+        
+        <!-- Lewa sekcja - Wizualna -->
+        <div id="accent-bg" class="w-[42%] bg-[#4c51bf] relative flex flex-col items-center justify-center p-10 overflow-hidden text-white transition-colors duration-500">
+            
+            <!-- Dekoracyjne ikony w tle -->
+            <svg class="sketch-icon top-10 left-10 w-16 rotate-12" viewBox="0 0 24 24" fill="white"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg class="sketch-icon bottom-20 right-10 w-20 -rotate-12" viewBox="0 0 24 24" fill="white"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+            
+            <!-- Ilustracje aktywności -->
+            <div class="relative z-10 w-full grid grid-cols-2 gap-4">
+                <div class="floating bg-white/20 backdrop-blur-md p-6 rounded-3xl border border-white/30 text-center shadow-lg">
+                    <span class="text-6xl mb-2 block">⚽</span>
+                    <span class="text-sm font-bold tracking-widest uppercase">Sport</span>
+                </div>
+                <div class="floating bg-white/20 backdrop-blur-md p-6 rounded-3xl border border-white/30 text-center shadow-lg" style="animation-delay: 0.5s">
+                    <span class="text-6xl mb-2 block">🧪</span>
+                    <span class="text-sm font-bold tracking-widest uppercase">Nauka</span>
+                </div>
+                <div class="floating bg-white/20 backdrop-blur-md p-6 rounded-3xl border border-white/30 text-center shadow-lg" style="animation-delay: 1s">
+                    <span class="text-6xl mb-2 block">🎨</span>
+                    <span class="text-sm font-bold tracking-widest uppercase">Sztuka</span>
+                </div>
+                <div class="floating bg-white/20 backdrop-blur-md p-6 rounded-3xl border border-white/30 text-center shadow-lg" style="animation-delay: 1.5s">
+                    <span class="text-6xl mb-2 block">🧩</span>
+                    <span class="text-sm font-bold tracking-widest uppercase">Zabawa</span>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center relative z-10">
+                <h3 contenteditable="true" class="text-3xl font-bold leading-tight outline-none drop-shadow-md">
+                    Twoja przygoda<br>zaczyna się tutaj!
+                </h3>
+                <div class="w-16 h-1 bg-white mx-auto mt-4 rounded-full opacity-50"></div>
+            </div>
+
+            <!-- Estetyczne fale na dole -->
+            <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="h-24 w-full fill-white/10">
+                    <path d="M0.00,49.98 C149.99,150.00 349.89,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Prawa sekcja - Informacyjna -->
+        <div id="info-section" class="w-[58%] bg-white p-14 flex flex-col justify-center relative overflow-hidden">
+            
+            <!-- Logo Szkoły -->
+            <div class="absolute top-6 right-6 z-20">
+                <img src="logo_sp5.png" alt="" class="w-28 md:w-36 h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300">
+            </div>
+
+            <div class="relative z-10 pointer-events-none">
+                <div class="inline-block bg-[#4c51bf] bg-opacity-10 px-4 py-1 rounded-full mb-4 pointer-events-auto transition-colors duration-500 bg-light-accent">
+                    <span contenteditable="true" class="text-[#4c51bf] font-bold tracking-widest uppercase text-xs outline-none text-accent">Zaproszenie dla dzieci i rodziców</span>
+                </div>
+                
+                <h1 contenteditable="true" class="text-7xl font-black text-gray-800 leading-[0.9] mb-6 outline-none uppercase pointer-events-auto">
+                    <span class="text-[#4c51bf] transition-colors duration-500 text-accent">Dzień</span> <br><span class="text-[#4c51bf] transition-colors duration-500 text-accent">Otwarty</span>
+                </h1>
+
+                <div class="flex items-stretch gap-6 mb-10 pointer-events-auto">
+                    <div class="bg-[#4c51bf] text-white px-6 py-4 rounded-[28px] text-center flex flex-col justify-center shadow-lg shadow-blue-200 transition-all duration-500 bg-accent">
+                        <span contenteditable="true" class="block text-5xl font-bold outline-none leading-none">04</span>
+                        <span contenteditable="true" class="block text-sm uppercase font-bold outline-none tracking-tighter mt-1">Marca 2026</span>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <h2 contenteditable="true" class="text-4xl font-bold text-gray-800 outline-none leading-none mb-1">SP 5 w Goleniowie</h2>
+                        <div class="flex items-center gap-2 text-gray-500 font-semibold">
+                            <span class="text-xl">⏰</span>
+                            <p contenteditable="true" class="outline-none">Godzina 17:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4 mb-10 pointer-events-auto">
+                    <div class="flex items-center gap-4 group">
+                        <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition">🏃‍♂️</div>
+                        <div>
+                            <p class="font-bold text-gray-800 leading-none text-lg">Wielka przygoda sportowa</p>
+                            <p contenteditable="true" class="text-sm text-gray-500 outline-none min-h-[1.25rem]">Gry i zabawy na nowej hali</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 group">
+                        <div class="w-12 h-12 bg-emerald-50 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition">🔬</div>
+                        <div>
+                            <p class="font-bold text-gray-800 leading-none text-lg">Magiczny świat nauki</p>
+                            <p contenteditable="true" class="text-sm text-gray-500 outline-none min-h-[1.25rem]">Eksperymenty dla ciekawskich</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-8 border-t-2 border-dashed border-gray-100 flex justify-between items-center pointer-events-auto">
+                    <div class="flex -space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-yellow-400 border-2 border-white flex items-center justify-center text-xs font-bold">😊</div>
+                        <div class="w-10 h-10 rounded-full bg-blue-400 border-2 border-white flex items-center justify-center text-xs font-bold">⚽</div>
+                        <div class="w-10 h-10 rounded-full bg-emerald-400 border-2 border-white flex items-center justify-center text-xs font-bold">✏️</div>
+                    </div>
+                    <p contenteditable="true" class="text-gray-400 font-medium text-sm outline-none italic text-right max-w-[250px]">
+                        Poznaj naszych nauczycieli i zobacz jak uczymy przez zabawę!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeColor(hex) {
+            document.getElementById('accent-bg').style.backgroundColor = hex;
+            const accents = document.querySelectorAll('.text-accent');
+            accents.forEach(el => el.style.color = hex);
+            const bgAccents = document.querySelectorAll('.bg-accent');
+            bgAccents.forEach(el => el.style.backgroundColor = hex);
+            const bgLightAccents = document.querySelectorAll('.bg-light-accent');
+            bgLightAccents.forEach(el => el.style.backgroundColor = hex + '1A'); // ok 10% opacity
+            const shadowAccents = document.querySelectorAll('.shadow-blue-200');
+            shadowAccents.forEach(el => el.style.boxShadow = `0 10px 15px -3px ${hex}40`);
+            document.getElementById('editor-title').style.color = hex;
+        }
+
+        // Logika biedronek
+        function createLadybug() {
+            const container = document.getElementById('info-section');
+            const bug = document.createElement('div');
+            bug.className = 'ladybug';
+            
+            bug.innerHTML = `
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M40 20 Q35 10 25 15" stroke="black" stroke-width="3" fill="none"/>
+                    <path d="M60 20 Q65 10 75 15" stroke="black" stroke-width="3" fill="none"/>
+                    <circle cx="50" cy="30" r="15" fill="black"/>
+                    <circle cx="50" cy="60" r="35" fill="#ef4444" class="bug-body"/>
+                    <line x1="50" y1="25" x2="50" y2="95" stroke="black" stroke-width="2"/>
+                    <circle cx="35" cy="50" r="5" fill="black" class="bug-dot"/>
+                    <circle cx="65" cy="50" r="5" fill="black" class="bug-dot"/>
+                    <circle cx="30" cy="70" r="5" fill="black" class="bug-dot"/>
+                    <circle cx="70" cy="70" r="5" fill="black" class="bug-dot"/>
+                    <circle cx="50" cy="80" r="5" fill="black" class="bug-dot"/>
+                </svg>
+            `;
+
+            const startX = Math.random() * (container.offsetWidth - 60) + 30;
+            const startY = Math.random() * (container.offsetHeight - 60) + 30;
+            bug.style.left = startX + 'px';
+            bug.style.top = startY + 'px';
+            bug.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+            bug.addEventListener('mouseenter', () => {
+                const newX = Math.random() * (container.offsetWidth - 80) + 40;
+                const newY = Math.random() * (container.offsetHeight - 80) + 40;
+                const rotation = Math.random() * 360;
+                bug.style.left = newX + 'px';
+                bug.style.top = newY + 'px';
+                bug.style.transform = `rotate(${rotation}deg) scale(1.2)`;
+                
+                setTimeout(() => {
+                    bug.style.transform = `rotate(${rotation}deg) scale(1)`;
+                }, 500);
+            });
+
+            bug.addEventListener('click', (e) => {
+                e.stopPropagation();
+                bug.style.transition = 'transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+                bug.style.transform += ' rotate(360deg) scale(1.5)';
+                const dots = bug.querySelectorAll('.bug-dot');
+                dots.forEach(dot => dot.setAttribute('fill', '#fbbf24'));
+                setTimeout(() => {
+                    dots.forEach(dot => dot.setAttribute('fill', 'black'));
+                    bug.style.transform = bug.style.transform.replace(' scale(1.5)', '');
+                }, 600);
+            });
+
+            container.appendChild(bug);
+        }
+
+        window.addEventListener('load', () => {
+            for(let i = 0; i < 5; i++) {
+                setTimeout(createLadybug, i * 200);
+            }
+            // Ustawienie koloru początkowego na granat SP5
+            changeColor('#4c51bf');
+        });
+    </script>
+</body>
+</html>
