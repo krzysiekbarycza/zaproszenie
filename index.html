@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -59,10 +60,10 @@
     
 
     <!-- Grafika Zaproszenia -->
-    <div id="invitation-card" class="print-shadow relative overflow-hidden bg-white w-full max-w-[1050px] aspect-[16/9] shadow-2xl rounded-[40px] flex border-[12px] border-white">
+    <div id="invitation-card" class="print-shadow relative overflow-hidden bg-white w-full max-w-[1050px] aspect-auto md:aspect-[16/9] shadow-2xl rounded-3xl md:rounded-[40px] flex flex-col md:flex-row border-8 md:border-[12px] border-white">
         
         <!-- Lewa sekcja - Wizualna -->
-        <div id="accent-bg" class="w-[42%] bg-[#4c51bf] relative flex flex-col items-center justify-center p-10 overflow-hidden text-white transition-colors duration-500">
+        <div id="accent-bg" class="w-full md:w-[42%] bg-[#4c51bf] relative flex flex-col items-center justify-center p-6 sm:p-8 md:p-10 overflow-hidden text-white transition-colors duration-500">
             
             <!-- Dekoracyjne ikony w tle -->
             <svg class="sketch-icon top-10 left-10 w-16 rotate-12" viewBox="0 0 24 24" fill="white"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
@@ -70,26 +71,26 @@
             
             <!-- Ilustracje aktywności -->
             <div class="relative z-10 w-full grid grid-cols-2 gap-4">
-                <div class="floating bg-white/20 backdrop-blur-md p-6 rounded-3xl border border-white/30 text-center shadow-lg">
-                    <span class="text-6xl mb-2 block">⚽</span>
+                <div class="floating bg-white/20 backdrop-blur-md p-4 sm:p-6 rounded-3xl border border-white/30 text-center shadow-lg">
+                    <span class="text-5xl sm:text-6xl mb-2 block">⚽</span>
                     <span class="text-sm font-bold tracking-widest uppercase">Sport</span>
                 </div>
-                <div class="floating bg-white/20 backdrop-blur-md p-6 rounded-3xl border border-white/30 text-center shadow-lg" style="animation-delay: 0.5s">
-                    <span class="text-6xl mb-2 block">🧪</span>
+                <div class="floating bg-white/20 backdrop-blur-md p-4 sm:p-6 rounded-3xl border border-white/30 text-center shadow-lg" style="animation-delay: 0.5s">
+                    <span class="text-5xl sm:text-6xl mb-2 block">🧪</span>
                     <span class="text-sm font-bold tracking-widest uppercase">Nauka</span>
                 </div>
-                <div class="floating bg-white/20 backdrop-blur-md p-6 rounded-3xl border border-white/30 text-center shadow-lg" style="animation-delay: 1s">
-                    <span class="text-6xl mb-2 block">🎨</span>
+                <div class="floating bg-white/20 backdrop-blur-md p-4 sm:p-6 rounded-3xl border border-white/30 text-center shadow-lg" style="animation-delay: 1s">
+                    <span class="text-5xl sm:text-6xl mb-2 block">🎨</span>
                     <span class="text-sm font-bold tracking-widest uppercase">Sztuka</span>
                 </div>
-                <div class="floating bg-white/20 backdrop-blur-md p-6 rounded-3xl border border-white/30 text-center shadow-lg" style="animation-delay: 1.5s">
-                    <span class="text-6xl mb-2 block">🧩</span>
+                <div class="floating bg-white/20 backdrop-blur-md p-4 sm:p-6 rounded-3xl border border-white/30 text-center shadow-lg" style="animation-delay: 1.5s">
+                    <span class="text-5xl sm:text-6xl mb-2 block">🧩</span>
                     <span class="text-sm font-bold tracking-widest uppercase">Zabawa</span>
                 </div>
             </div>
             
             <div class="mt-12 text-center relative z-10">
-                <h3 contenteditable="true" class="text-3xl font-bold leading-tight outline-none drop-shadow-md">
+                <h3 contenteditable="true" class="text-2xl sm:text-3xl font-bold leading-tight outline-none drop-shadow-md">
                     Twoja przygoda<br>zaczyna się tutaj!
                 </h3>
                 <div class="w-16 h-1 bg-white mx-auto mt-4 rounded-full opacity-50"></div>
@@ -104,7 +105,7 @@
         </div>
 
         <!-- Prawa sekcja - Informacyjna -->
-        <div id="info-section" class="w-[58%] bg-white p-14 flex flex-col justify-center relative overflow-hidden">
+        <div id="info-section" class="w-full md:w-[58%] bg-white p-8 sm:p-10 md:p-14 pt-28 sm:pt-32 md:pt-14 flex flex-col justify-center relative overflow-hidden">
             
             <!-- Logo Szkoły -->
             <div class="absolute top-6 right-6 z-20">
@@ -116,17 +117,17 @@
                     <span contenteditable="true" class="text-[#4c51bf] font-bold tracking-widest uppercase text-xs outline-none text-accent">Zaproszenie dla dzieci i rodziców</span>
                 </div>
                 
-                <h1 contenteditable="true" class="text-7xl font-black text-gray-800 leading-[0.9] mb-6 outline-none uppercase pointer-events-auto">
+                <h1 contenteditable="true" class="text-5xl sm:text-6xl md:text-7xl font-black text-gray-800 leading-[0.9] mb-6 outline-none uppercase pointer-events-auto">
                     <span class="text-[#4c51bf] transition-colors duration-500 text-accent">Dzień</span> <br><span class="text-[#4c51bf] transition-colors duration-500 text-accent">Otwarty</span>
                 </h1>
 
-                <div class="flex items-stretch gap-6 mb-10 pointer-events-auto">
-                    <div class="bg-[#4c51bf] text-white px-6 py-4 rounded-[28px] text-center flex flex-col justify-center shadow-lg shadow-blue-200 transition-all duration-500 bg-accent">
-                        <span contenteditable="true" class="block text-5xl font-bold outline-none leading-none">03</span>
+                <div class="flex flex-col sm:flex-row items-stretch gap-4 sm:gap-6 mb-10 pointer-events-auto">
+                    <div class="bg-[#4c51bf] text-white px-6 py-4 rounded-[28px] text-center flex flex-col justify-center shadow-lg shadow-blue-200 transition-all duration-500 bg-accent sm:min-w-[180px]">
+                        <span contenteditable="true" class="block text-4xl sm:text-5xl font-bold outline-none leading-none">03</span>
                         <span contenteditable="true" class="block text-sm uppercase font-bold outline-none tracking-tighter mt-1">Marca 2026</span>
                     </div>
                     <div class="flex flex-col justify-center">
-                        <h2 contenteditable="true" class="text-4xl font-bold text-gray-800 outline-none leading-none mb-1">SP 5 w Goleniowie</h2>
+                        <h2 contenteditable="true" class="text-3xl sm:text-4xl font-bold text-gray-800 outline-none leading-none mb-1">SP 5 w Goleniowie</h2>
                         <div class="flex items-center gap-2 text-gray-500 font-semibold">
                             <span class="text-xl">⏰</span>
                             <p contenteditable="true" class="outline-none">Godzina 17:00 - 18:30</p>
@@ -151,13 +152,13 @@
                     </div>
                 </div>
 
-                <div class="pt-8 border-t-2 border-dashed border-gray-100 flex justify-between items-center pointer-events-auto">
+                <div class="pt-8 border-t-2 border-dashed border-gray-100 flex flex-col sm:flex-row justify-between items-center gap-4 pointer-events-auto">
                     <div class="flex -space-x-3">
                         <div class="w-10 h-10 rounded-full bg-yellow-400 border-2 border-white flex items-center justify-center text-xs font-bold">😊</div>
                         <div class="w-10 h-10 rounded-full bg-blue-400 border-2 border-white flex items-center justify-center text-xs font-bold">⚽</div>
                         <div class="w-10 h-10 rounded-full bg-emerald-400 border-2 border-white flex items-center justify-center text-xs font-bold">✏️</div>
                     </div>
-                    <p contenteditable="true" class="text-gray-400 font-medium text-sm outline-none italic text-right max-w-[250px]">
+                    <p contenteditable="true" class="text-gray-400 font-medium text-sm outline-none italic text-center sm:text-right max-w-[250px]">
                         Poznaj naszych nauczycieli i zobacz jak uczymy przez zabawę!
                     </p>
                 </div>
